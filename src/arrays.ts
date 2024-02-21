@@ -142,12 +142,7 @@ export function makeMath(addends: number[]): string {
 export function injectPositive(values: number[]): number[] {
     const newArr = values.map((value: number): number => value);
     const index = newArr.findIndex((num) => num < 0);
-    const sum =
-        index !== -1
-            ? newArr
-                  .slice(0, index)
-                  .reduce((amountTotal, num) => amountTotal + num, 0)
-            : 0;
+    const sum = index !== -1 ? newArr.slice(0, index).reduce((amountTotal, num) => amountTotal + num, 0) : 0;
     if (index !== -1) {
         newArr.splice(index + 1, 0, sum);
     } else {
