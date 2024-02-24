@@ -253,19 +253,7 @@ export function editOption(
 ): Question[] {
     if (targetOptionIndex >= 0) {
         // eslint-disable-next-line prettier/prettier
-        const newArr = questions.map(
-            (question: Question): Question =>
-                question.id === targetId
-                    ? {
-                          ...question,
-                          options: [
-                              ...question.options.slice(0, targetOptionIndex),
-                              newOption,
-                              ...question.options.slice(targetOptionIndex + 1)
-                          ]
-                      }
-                    : { ...question }
-        );
+        const newArr = questions.map((question: Question): Question => question.id === targetId ? {...question, options: [...question.options.slice(0, targetOptionIndex), newOption, ...question.options.slice(targetOptionIndex + 1)]} : { ...question });
         return newArr;
     } else {
         // eslint-disable-next-line prettier/prettier
