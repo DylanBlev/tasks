@@ -41,6 +41,7 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
+
             <Container>
                 <Row>
                     <Col>
@@ -67,7 +68,7 @@ function App(): JSX.Element {
             </Container>
 
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
